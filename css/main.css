@@ -119,6 +119,9 @@ h2 {
     text-align: center;
     color: #000;
 }
+h4{
+    color: #575756;
+}
 p{
     color: #000000;
 }
@@ -189,6 +192,10 @@ nav {
 }
 .head-text {
     color: #fff;
+    max-width: 430px;
+}
+.left-quote {
+    opacity: 0.4;
 }
 .user-experience {
     margin-top: 150px;
@@ -233,6 +240,10 @@ hr {
     padding: 20px 0;
     border-radius: 4px;
     margin-top: 20px;
+    overflow: hidden;
+}
+.tour-informations .icon-bus {
+    width: 41px;
 }
 .tour-informations li p:last-of-type {
     color: #f5c41f;
@@ -249,6 +260,9 @@ hr {
 /**********Tour end**********/
 
 /**********Services**********/
+.services-main {
+    padding: 0;
+}
 .services {
     background-color: #f7b74f;
 }
@@ -406,17 +420,55 @@ button {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   @media only screen and (min-width: 768px) {
+    /**********Hero**********/
+    .user-experience {
+        margin-top: 350px;
+    }
+    /**********Tour**********/
+    .tour-informations .booking-tab img {
+        width: 63px;
+        float: left;
+        margin: 10px 0 0 40px;
+    }
+    .tour-informations .booking-tab h4 {
+        font-size: 25px;
+        float: left;
+        margin: 5px 0 0 40px;
+        
+    }
+    .tour-informations .booking-tab p {
+        float: left;
+        margin: 15px 0 0 40px;
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
+    }
+    .tour-informations .booking-tab p:last-of-type {
+        font-size: 30px;
+        float: right;
+        margin: -42px 15px 0 0;
+    }
+    .tour-informations .booking-tab hr {
+        transform: rotate(90deg);
+        margin-left: -40px;
+        border-top: 10px dotted #f1eaeb;
+    }
+    .tour button {
+        float: right;
+        margin: 10px 25px 0 0;
+    }
+    /**********Services**********/
+    .services-main {
+        padding: 10px 50px;
+    }
+    .services {
+        border-radius: 5px;
+    }
+    .services button {
+        margin-bottom: 50px;
+    }
+   }
+   
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
