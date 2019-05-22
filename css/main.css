@@ -203,12 +203,19 @@ nav {
     max-width: 220px; 
     float: right;
 }
-.user-experience li:nth-child(3){
-    font-weight: 700;
-}
 .user-experience img {
     border-radius: 50%;
+    float: right;
+    margin-top: 5px;
 }
+.user-experience .user-right-side {
+    float: left;
+    margin-left: 75px;
+}
+.user-experience .user-right-side p {
+    margin: 0;
+}
+
 
 /**********Hero end**********/
 
@@ -424,8 +431,25 @@ button {
    @media only screen and (min-width: 768px) {
     /**********Hero**********/
     .user-experience {
-        margin-top: 350px;
+        max-width: 400px;
+        text-align: left;
     }
+    .user-experience img {
+        widows: 45px;
+        float: right;
+        margin-right: 25px;
+    }
+    .user-experience .user-left-side {
+        float: left;
+        width: 70%;
+    }
+    .user-experience .user-right-side {
+        transform: rotate(270deg);
+        margin-left: 77%;
+        margin-top: -80px;
+    }
+    
+    
     /**********Tour**********/
     .tour-informations .left-side {
         width: 80.33%;
