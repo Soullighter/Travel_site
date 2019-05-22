@@ -234,6 +234,7 @@ hr {
 }
 .tour h2 {
     color: #fff;
+    margin: 40px 0 40px 0;
 }
 .tour-informations li {
     background-color: #fff;
@@ -245,7 +246,7 @@ hr {
 .tour-informations .icon-bus {
     width: 41px;
 }
-.tour-informations li p:last-of-type {
+.tour-informations .right-side p { 
     color: #f5c41f;
     font-weight: 700;
     font-size: 1.4em;
@@ -426,45 +427,59 @@ button {
         margin-top: 350px;
     }
     /**********Tour**********/
-    .tour-informations .booking-tab img {
-        width: 63px;
+    .tour-informations .left-side {
+        width: 80.33%;
         float: left;
-        margin: 10px 0 0 40px;
     }
-    .tour-informations .booking-tab h4 {
+    .tour-informations .left-side img {
+        float: left;
+        margin: 20px 40px 0 40px;
+    }
+    .tour-informations .left-side h4 {
+        text-align: left;
+        margin: 15px 0 0 0;
+    }
+    .tour-informations .booking-tab .left-side h4{
         font-size: 25px;
-        float: left;
-        margin: 5px 0 0 40px;
-        
     }
-    .tour-informations .booking-tab p {
-        float: left;
-        margin: 15px 0 0 40px;
-
+    .tour-informations .left-side p {
+        text-align: left;
+        margin: 5px 0 10px 0;
     }
-    .tour-informations .booking-tab p:last-of-type {
-        font-size: 30px;
+    .booking-tab .right-side {
+        width: 20.33%;
         float: right;
-        margin: -42px 15px 0 0;
+        margin-top: -100px;
+    }
+    .tour-informations hr {
+        transform: rotate(90deg);
+        margin-left: -130px;
     }
     .tour-informations .booking-tab hr {
-        transform: rotate(90deg);
-        margin-left: -40px;
         border-top: 10px dotted #f1eaeb;
+        margin-left: -150px;
     }
+    
     .tour button {
         float: right;
-        margin: 10px 25px 0 0;
+        margin: 0 30px 0 0;
     }
+    .tour-informations li:nth-child(n+2){
+        max-width: 85%;
+        font-size: 14px;
+    }
+
     /**********Services**********/
-    .services-main {
-        padding: 10px 50px;
-    }
     .services {
         border-radius: 5px;
+        margin: 0 50px;
     }
     .services button {
         margin-bottom: 50px;
+    }
+    .discover {
+        margin: 0 20px;
+        border-radius: 5px;
     }
    }
    
