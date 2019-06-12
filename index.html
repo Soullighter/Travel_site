@@ -14,38 +14,41 @@
   
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
+  
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <header>
-    <div class="container">
-        <div>
-          <a href="index.html" class="header-logo"><img src="img/logo.png" alt="Travel site logo"></a>
-          <a href="" class="icon-search"><img src="img/icon-search.png"></a>
-          <button class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-          
-      <nav>
-        <ul class="unstyle-list text-center">
-          <li>Home</li>
-          <li>Discover</li>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>Help</li>
-        </ul>
-      </nav>    
-  </div>
-</header>
-
 <main>
   <!--Home-->
   <div class="hero container">
+      <div class="nav-help">
+          <a href="index.html" class="header-logo"><img src="img/logo.png" alt="Travel site logo"></a>
+            <button class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+              <div class="icon-search">
+                <img src="img/icon-search.png">
+              </div>
+        </div>
+        <nav>
+          <ul class="unstyle-list text-center">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#help">Help</a></li>
+              <div class="right-nav-login unstyle-list">
+                <li><a href="#sing-up">Sing up</a></li>
+                <li><a href="#login">Login</a></li>
+              </div>
+          </ul>
+        </nav>
     <h1>Experience The World</h1>
       <p class="head-text">Sed ut perspiciatis, unde omnis iste 
           natus error sit voluptatem accusantimum 
@@ -53,48 +56,36 @@
           aperiam eaque.</p>
         <div>
           <button class="btn">Explore All</button>
-          <button class="btn-2">Watch Story</button>
+          <button class="btn-2"><img src="img/icon-play.png">Watch storie</button>
         </div> 
-        <!--<ul class="user-experience unstyle-list clearfix">
-          <li>
-            <h5>Best travel guide!</h5>
-            <img src="img/left-quote.png" alt="Left quote" class="left-quote">
-          </li>
-          <li>
-            <p>The communication was super easy and quick and the place looks exactly like it does on the pictures. The neighborhood is very</p>
-          </li>
-          <li>
-            <p>Jamie Diaz</p>
-          </li>
-          <li>
-            <p>Serbia</p>
-          </li>
-          <li>
-            <img src="img/user.jpg" alt="User">
-          </li>
-        </ul>-->
-
-        <div class="user-experience">
-          <div class="user-left-side">
-            <h5>Best travel guide!</h5>
-              <!--<img src="img/left-quote.png" alt="Left quote" class="left-quote">-->
+          <div class="user-experience">
+            <div class="user-left-side">
+              <h5>Best travel guide!</h5>
                 <p>The communication was super easy and quick and the place looks exactly like it does on the pictures. The neighborhood is very</p>
-          </div>
-          <div>
+            </div>
+            <img src="img/left-quote.png" alt="Left quote" class="left-quote">
+            <div class="user">
               <img src="img/user.jpg" alt="User">
             </div>
-          <div class="user-right-side">
-            <p>Jamie Diaz</p>
-            <p>Serbia</p>
+              <div class="user-right-side">
+                <p>Jamie Diaz</p>
+                <p>Serbia</p>
+              </div>
           </div>
-        </div>
-      </div>
+  </div>
   
   <div class="explore container">
-    <p>Explore</p>
-    <h2>Most popular destinations</h2>
-    <p class="text-center">Take a look at the Best Places to Travel in 2019 for additional inspiration and if you already know where you're vgoing this coming year, share your plans with us on social media with 
-        #TLBestPlacesthis link opens in a new tab.</p>
+    <div class="left-side">
+      <p>Explore</p>
+        <h2>Most popular destinations</h2>
+          <p class="text-center">Take a look at the Best Places to Travel in 2019 for additional inspiration and if you already know where you're vgoing this coming year, share your plans with us on social media with #TLBestPlacesthis link opens in a new tab.</p>
+    </div>  
+          <button class="btn">Explore All</button>
+          <div class="slick-slider">
+              <div><img src="img/img-1.jpg" alt="Novi Sad,Serbia"></div>
+              <div><img src="img/img-2.jpg" alt="Amesterdam,Netherlands"></div>
+              <div><img src="img/img-3.jpg" alt="The Bahamas"></div>
+          </div>
   </div>
 
   <div class="tour container">
@@ -146,51 +137,80 @@
         </div>
       </li>
     </ul>
-    <img src="img/people.png" alt="People">
+      <div class="img-people">
+        <img src="img/people.png" alt="People">
+      </div>
   </div>
 
   <div class="services-main container">
     <h2>Traveling is Easy</h2>
       <div class="services container text-center">
+        <div>
           <h2>All Services In One Round</h2>
           <p>Travel on beaches</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sem id justo hendrerit varius. Nulla nec ante diam. Aenean ligula elit, rutrum vitae est nec, imperdiet vestibulum lacus. Nulla commodo sodales euismod. Ut sed elementum diam. Suspendisse potenti. Etiam sed augue et urna imperdiet tincidunt. Curabitur imperdiet enim luctus turpis fringilla viverra. Phasellus dictum et dolor sit amet ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec</p>
           <button>Read more</button>
+        </div>
       </div>
       <div class="discover container">
           <h2>Discover popular places</h2>
-      </div>
+
+            <button class="accordion-1">TURKEY</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+          
+            <button class="accordion-2">RUSSIA</button>
+            <div class="panel">
+              <h3>Moscow</h3>
+              <p>Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center. It's home to Lenin’s Mausoleum, the State Historical.</p>
+            </div>
+          
+            <button class="accordion-3">BRAZIL</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div> 
+        
+            <button class="accordion-4">CHINA</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div> 
+         
+            <button class="accordion-5">THAILAND</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div> 
+          </div>
+      
+      <div class="about container">
+          <h2>I am page heading</h2>
+          <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh porta, quis fermentum lacus porta. Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus lectus. </p>
+            <ul>
+              <li>
+                <p>Duis vel euismod arcu. Etiam vestibulum leo</p>
+              </li>
+              <li>
+                <p>In ac sodales odio, ac viverra ante. Nunc massa felis, blandit fringilla risus eget, feugiat vulputate nulla. Duis sollicitudin dictum </p>
+              </li>
+              <li>
+                <p>Duis vel euis mod arcu.</p>
+              </li>
+            </ul>
+      
+            <ul class="unstyle-list">
+              <li>
+                <h3>I am page subheading</h3>
+              </li>
+              <li>
+                <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh porta, quis fermentum lacus porta.</p>
+              </li>
+              <li>
+                <p>Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus lectus. Duis sollicitudin vestibulum egestas. Praesent pharetra congue quam sed sodales. Proin in bibendum purus. Aenean blandit purus a hendrerit tincidunt. Check it <a href="">here</a></p>
+              </li>
+            </ul>
+        </div>
   </div>
 
- 
-
-  <div class="container">
-    <h3>I am page heading</h3>
-    <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh porta, quis fermentum lacus porta. Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus lectus. </p>
-      <ul>
-        <li>
-          <p>Duis vel euismod arcu. Etiam vestibulum leo</p>
-        </li>
-        <li>
-          <p>In ac sodales odio, ac viverra ante. Nunc massa felis, blandit fringilla risus eget, feugiat vulputate nulla. Duis sollicitudin dictum </p>
-        </li>
-        <li>
-          <p>Duis vel euis mod arcu.</p>
-        </li>
-      </ul>
-
-      <ul class="unstyle-list">
-        <li>
-          <h4>I am page subheading</h4>
-        </li>
-        <li>
-          <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh porta, quis fermentum lacus porta.</p>
-        </li>
-        <li>
-          <p>Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus lectus. Duis sollicitudin vestibulum egestas. Praesent pharetra congue quam sed sodales. Proin in bibendum purus. Aenean blandit purus a hendrerit tincidunt. Check it <a href="">here</a></p>
-        </li>
-      </ul>
-  </div>
 
   <div class="contact container">
     <form>
@@ -201,7 +221,10 @@
           <input type="text" name="email" placeholder="jhondoerr@google.com">
         <legend>Message</legend>
           <input type="text" name="message" placeholder="Your message">
-          <input type="checkbox" name="terms"><p>I agree to the Terms, Privacy Policy and Fees.</p>
+        <div class="checkbox-wrap">
+          <input type="checkbox" name="terms">
+          <p>I agree to the Terms, Privacy Policy and Fees.</p>
+        </div>
           <input type="submit" value="Send message" class="btn-3">
     </form>
   </div>
@@ -216,12 +239,14 @@
   <p>&copy; Company Name All Rights Reserved 2019</p>
 </footer>
 
-
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/slick.js"></script>
+
+ 				
 </body>
 
 </html>

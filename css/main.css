@@ -119,11 +119,30 @@ h2 {
     text-align: center;
     color: #000;
 }
+h3 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #2e2d2c;
+    font-weight: 700;
+}
+h3:after {
+    content: ' ';
+    display: block;
+    border: 1px solid #5d77ba;
+    width: 45px;
+    margin: 15px auto;
+}
 h4{
     color: #575756;
 }
 p{
-    color: #000000;
+    color: #2e2d2c;;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
 }
 /**********Header**********/
 header {
@@ -133,27 +152,49 @@ header {
     display: inline-block;
 }
 nav {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    color: #ffffff;
-    background: rgb(0, 0, 0, 0.5);
     display: none; /**/
+    /*display: table;*/
+    position: fixed;
+    top: 45px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #2e2d2c;
+    background: #f3f5f9;
+    z-index: 1;
 }
-
-.icon-search {
-    float: right;
-    margin-right: 55px;
+nav a,
+.right-nav-login a {
+    font-size: 1.375em;
+    line-height: 70px;
+    padding: 5px 10px;
+    color: #2e2d2c;
+    font-weight: 700;
+}
+nav a:hover {
+    color: #f1592d;
+}
+.nav-help {
+    position: relative;
+    background-color: #fff;
+    margin: -10px -20px 0 -20px;
+    padding: 10px 20px 10px 20px;
+}
+.right-nav-login li img {
+    position: absolute;
+    top: -30px;
+    right: 70px;
 }
 .burger{
     width: 35px;
     height: 25px;
-    padding: 5px 0;
+    padding: 4px 0;
     float: right; 
     outline: none;
-    margin-right: -70px;
+}
+.icon-search {
+    float:right;
+    margin-right: 18px;
 }
 .burger span {
     width: 100%;
@@ -171,10 +212,12 @@ nav {
 /**********Hero**********/
 .hero {
     background: url(../img/background.jpg) no-repeat center center;
+    position: relative;
+    z-index: -1;
 }
 
 .btn, .btn-2 {
-    width: 125px;
+    width: 155px;
     height: 50px;
     color: #fff;
     margin-top: 50px;
@@ -183,30 +226,48 @@ nav {
     background-color: #f05a28;
     margin-right: 20px;
 }
-.btn-2 {
-    border: 2px solid #fff;
+.btn:hover, .btn-3:hover {
+    background-color: #c54b1b;
 }
 .btn-3 {
     width: 176px;
     color: #fff;
+}
+.btn-2 {
+    border: 2px solid #fff;
+}
+.btn-2:hover {
+    background: #fff; 
+    color: #f05a28;
+}
+.btn-2 img {
+    padding-right: 10px;
 }
 .head-text {
     color: #fff;
     max-width: 430px;
 }
 .left-quote {
+    width: 62px;
+    height: 53px;
+    position: absolute;
+    left: -10px;
+    top: 35px;
     opacity: 0.4;
+    z-index: -1;
 }
 .user-experience {
-    margin-top: 150px;
+    margin: 150px 0 50px 0;
     text-align: right;
     max-width: 220px; 
     float: right;
+    position:relative;
 }
-.user-experience img {
+.user-experience .user img {
     border-radius: 50%;
     float: right;
     margin-top: 5px;
+    width: 40px;
 }
 .user-experience .user-right-side {
     float: left;
@@ -215,11 +276,15 @@ nav {
 .user-experience .user-right-side p {
     margin: 0;
 }
-
-
+.user-experience .user-right-side p:first-of-type {
+    font-weight: 700;
+}
 /**********Hero end**********/
 
 /**********Explore**********/
+.explore .btn {
+    display: none;
+}
 .explore h2 {
     color: #2f797a;
     margin-top: -121px;
@@ -238,6 +303,9 @@ hr {
 /**********Tour**********/
 .tour {
     background-color: #7cc9c2;
+    z-index: -1;
+    position:relative;
+    overflow: hidden;
 }
 .tour h2 {
     color: #fff;
@@ -253,6 +321,9 @@ hr {
 .tour-informations .icon-bus {
     width: 41px;
 }
+.tour-informations .left-side {
+    padding: 0 10px;
+}
 .tour-informations .right-side p { 
     color: #f5c41f;
     font-weight: 700;
@@ -264,6 +335,9 @@ hr {
     background-color: #87c5ec;
     color: #fff;
     font-weight: 500;
+}
+.tour .img-people {
+    display: none;
 }
 /**********Tour end**********/
 
@@ -289,13 +363,105 @@ hr {
     background-color: #f05a28;
     color: #fff;
 }
+.services button:hover {
+    background-color: #c54b1b;
+}
 /**********Services end**********/
 
 /**********Discover**********/
 .discover {
     background-color: #f7f7f7;
 }
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion-1, 
+ .accordion-2, 
+ .accordion-3, 
+ .accordion-4, 
+ .accordion-5 {
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 30px;
+    margin: 10px auto;
+    width: 78%;
+    transition: 0.4s;
+    display: flex;
+    justify-content: end;
+  }
+    .accordion-1 {
+        background: url(../img/cont-1.jpg) no-repeat;
+    }
+    .accordion-2 {
+        background: url(../img/cont-2.jpg) no-repeat;
+    }
+    .accordion-3 {
+        background: url(../img/cont-3.jpg) no-repeat;
+    }
+    .accordion-4 {
+        background: url(../img/cont-4.jpg) no-repeat;
+    }
+    .accordion-5 {
+        background: url(../img/cont-5.jpg) no-repeat;
+    }
+  .accordion-1:after, 
+  .accordion-2:after, 
+  .accordion-3:after, 
+  .accordion-4:after,
+  .accordion-5:after {
+    content: url(../img/arrow-down.png); /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    padding: 0 0 0 20px;
+  }
+  
+  .discover button .active:after {
+    content: url(../img/arrow-up.png); /* Unicode character for "minus" sign (-) */
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, 
+  .accordion-1:hover, 
+  .accordion-2:hover, 
+  .accordion-3:hover, 
+  .accordion-4:hover, 
+  .accordion-5:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  } 
+  .discover .panel p {
+      text-align: center;
+      padding: 30px 0;
+  }
 /**********Discover end**********/
+.about {
+    padding-bottom: 50px;
+}
+.about h2,
+h3 {
+    color: #000;
+    text-align: left;
+}
+.about h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+.about h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.about h3:after {
+    display: none;
+}
+
 
 /**********Contact end**********/
 legend {
@@ -311,6 +477,11 @@ input {
     padding: 20px 15px;
     margin-bottom: 20px;
 }
+.checkbox-wrap {
+    position: relative;
+    
+}
+
 /**********Contact end**********/
 
 /**********Footer**********/
@@ -327,9 +498,46 @@ footer ul li img{
 footer p {
     color: #fff;
     font-size: 12px;
+    text-align: center;
 }
 /**********Footer end**********/
 
+/**********Slick slider**********/
+.slick-list .slick-track .slick-slide {
+    width: 240px!important;
+}
+.slick-list {
+    padding:0 20% 0 0!important;
+}
+.slick-initialized .slick-slide div  {
+    width: 229px;
+    height: 348px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slick-next {
+    right: 5px;
+}
+[dir='rtl'] .slick-next {
+    right: auto;
+    left: -25px;
+}
+.slick-next:before {
+    content: url(../img/arrow-right.png);
+}
+[dir='rtl'] .slick-next:before {
+    content: url(../img/arrow-left.png);
+}
+.slick-prev {
+    left: 5px;
+    z-index: 1;
+}
+.slick-prev:before {
+    content: url(../img/arrow-left.png);
+}
+[dir='rtl'] .slick-prev:before {
+    content: url(../img/arrow-right.png);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -428,16 +636,21 @@ button {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-   @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     /**********Hero**********/
+    .left-quote {
+        width: 87px;
+        height: 73px;
+        top: 0;
+        left: -50px;
+    }
     .user-experience {
         max-width: 400px;
         text-align: left;
     }
-    .user-experience img {
-        widows: 45px;
-        float: right;
+    .user-experience .user img {
         margin-right: 25px;
+        width: 50px;
     }
     .user-experience .user-left-side {
         float: left;
@@ -445,11 +658,47 @@ button {
     }
     .user-experience .user-right-side {
         transform: rotate(270deg);
-        margin-left: 77%;
-        margin-top: -80px;
+        position: absolute;
+        bottom: 15px;
+        left: 230px;
     }
-    
-    
+    /**********Explore**********/
+    .explore .left-side {
+        width: 50%;
+        margin: 20px 20px 0 0;
+    }
+    .explore .btn {
+        display: block;
+    }
+    .explore .left-side p{
+        text-align: left;
+    }
+    .explore .left-side h2{
+        text-align: left;
+    }
+    .explore p:first-of-type {
+        text-align: left;
+    }
+    /**********Slick slider**********/
+    .slick-list {
+        padding: 0 0 0 0 !important;
+    }
+    .slick-list .slick-track .slick-slide {
+        width: 290px!important;
+    }
+    .slick-slider {
+        top: -400px;
+        right: -380px;
+        margin: 30px;
+    }
+    .slick-initialized .slick-slide div  {
+        width: 100%;
+        height: 383px;
+    }
+    .slick-slider .slick-list  {
+        width: 1200px;
+    }
+
     /**********Tour**********/
     .tour-informations .left-side {
         width: 80.33%;
@@ -483,16 +732,24 @@ button {
         border-top: 10px dotted #f1eaeb;
         margin-left: -150px;
     }
-    
     .tour button {
         float: right;
         margin: 0 30px 0 0;
+    }
+    .tour button:hover {
+        background-color: #4a79bc;
     }
     .tour-informations li:nth-child(n+2){
         max-width: 85%;
         font-size: 14px;
     }
-
+    .tour .img-people {
+        display: block;
+        position: absolute;
+        top: 285px;
+        margin-left: 288px;
+        z-index: -1;
+    }
     /**********Services**********/
     .services {
         border-radius: 5px;
@@ -505,8 +762,151 @@ button {
         margin: 0 20px;
         border-radius: 5px;
     }
-   }
+    /**********Contact**********/
+    .contact {
+        background-color: #f7f7f7;
+    }
+    form {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    /**********Footer**********/
+    footer p {
+        float: left;
+    }
+    footer ul {
+        float: right;
+    }
+}
    
+@media only screen and (min-width: 1024px) {
+    nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 4%;
+        width: 950px;
+        height: auto;
+        background: #fff;
+      }
+    nav ul {
+        position: absolute;
+        top: -13px;
+        left: 150px;
+    }
+    nav li {
+        float: left;
+    }
+    nav a,
+    .right-nav-login a {
+        font-size: 0.8em;
+    }
+    nav a:hover,
+    nav .active,
+    .right-nav-login a:hover {
+        color: #2e2d2c;
+        background-color: #f3f5f9;
+        transition: 0.4s;
+        border-bottom: 3px solid rgba(240, 90, 40);
+        padding: 31px 10px 31px 10px;
+        margin-right: 10px;
+    }
+    .nav-help {
+        position: relative;
+        height: 80px;
+        top: -10px;
+        width: 950px;
+        margin: 0 auto;
+    }
+    .right-nav-login {
+        display: inline-flex;
+        margin: 0 0 0 220px;
+    }
+    .right-nav-login li img {
+        margin: 26px 10px 0 0;
+    }
+    .header-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .icon-search {
+        margin: 17px 210px 0 0;
+    }
+    .burger {
+        display:none;
+    }  
+    /**********Tour**********/
+    .tour-informations li:nth-child(n+2){
+        max-width: 70%;
+    }
+    /**********Slick slider**********/
+    .slick-slider {
+        top: -370px;
+        right: -240px;
+        margin: 30px;
+    }  
+    /**********Tour**********/
+    .tour {
+        margin-bottom: 35px;
+    }
+    .booking-tab {
+        width: 90%;
+    }
+    .tour .img-people {
+        margin-left: 487px;
+    }
+    /**********Services**********/
+    .services-main {
+        position: relative;
+        max-height: 1400px;
+    }
+    .services {
+        margin: 100px 30px;
+    }
+    .services div, 
+    .discover {
+        width: 45%;
+    }
+    .discover {
+        position: absolute;
+        top: 130px;
+        left: 505px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    nav ul {
+        left: 175px;
+    }
+    .right-nav-login {
+        margin: 0 0 0 235px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    nav {
+        width: 1100px;
+    }
+    nav ul {
+        left: 230px;
+    }
+    .nav-help {
+        width: 80%;
+    }
+    .right-nav-login {
+        margin: 0 0 0 210px;
+    }
+    /**********Services**********/
+    .services div {
+        width: 40%;
+    }
+    .discover {
+        width: 50%;
+    }
+}
+
 
 
 /* ==========================================================================
