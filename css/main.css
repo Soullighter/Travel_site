@@ -503,19 +503,7 @@ footer p {
 /**********Footer end**********/
 
 /**********Slick slider**********/
-.slick-list .slick-track {
-    width: 855px!important;
-}
-.slick-list .slick-track .slick-slide {
-    width: 240px!important;
-}
-.slick-list {
-    padding:0 20% 0 0!important;
-}
 .slick-initialized .slick-slide div  {
-    width: 229px;
-    height: 348px;
-    overflow: hidden;
     border-radius: 5px;
 }
 .slick-next {
@@ -540,6 +528,11 @@ footer p {
 }
 [dir='rtl'] .slick-prev:before {
     content: url(../img/arrow-right.png);
+}
+.slick-slide img {
+    border-radius: 5px;
+    max-width: calc(100% - 10px);
+    margin-left: 5px;
 }
 /* ==========================================================================
    Helper classes
@@ -669,6 +662,7 @@ button {
     .explore .left-side {
         width: 50%;
         margin: 20px 20px 0 0;
+        float: left;
     }
     .explore .btn {
         display: block;
@@ -683,23 +677,9 @@ button {
         text-align: left;
     }
     /**********Slick slider**********/
-    .slick-list {
-        padding: 0 0 0 0 !important;
-    }
-    .slick-list .slick-track .slick-slide {
-        width: 290px!important;
-    }
     .slick-slider {
-        top: -400px;
-        right: -380px;
-        margin: 30px;
-    }
-    .slick-initialized .slick-slide div  {
-        width: 100%;
-        height: 383px;
-    }
-    .slick-list .slick-track {
-        width: 1200px!important;
+        float: right;
+        width: 42%;
     }
     /**********Tour**********/
     .tour-informations .left-side {
@@ -789,8 +769,6 @@ button {
     }
     /**********Slick slider**********/
     .slick-slider {
-        top: -370px;
-        right: -240px;
         margin: 30px;
     }  
     /**********Tour**********/

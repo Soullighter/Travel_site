@@ -1,22 +1,14 @@
 //Slick slider 
 $(document).ready(function(){
   $('.slick-slider').slick({
-    centerMode: true,
-    centerPadding: '19%',
-    infinite: false,
     speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 1,
+    // centerMode: true,
+    infinite: false,
+    variableWidth: true,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
@@ -29,9 +21,6 @@ $(document).ready(function(){
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 });
