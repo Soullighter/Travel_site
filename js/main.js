@@ -1,3 +1,4 @@
+//Slick slider 
 $(document).ready(function(){
   $('.slick-slider').slick({
     centerMode: true,
